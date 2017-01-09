@@ -149,11 +149,11 @@ function sentenceMachine (partOne){
 // ```
 
 function subway(personName){
+  var obj = {
+    orderPerson: personName,
+    ingredients: []
+  }
   return function addIngredient(ingredient){
-    var obj = {
-      orderPerson: personName,
-      ingredients: []
-    }
     obj['ingredients'].push(ingredient);
     return obj;
   };
